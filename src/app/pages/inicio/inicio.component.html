@@ -1,9 +1,13 @@
-<div id="cover" class="back h-100" >
+<div id="cover" class="back h-100" style="width: 100vw;overflow-x:hidden;" >
     <div #aboutme class="container-fluid p-3 bg-d " style="height: auto; width: 100%;">
         <app-navbar class="col-12"></app-navbar>
             <div class="row h-100 text-center" style="min-height: 50em;">
             <div class="col-12 col-md-4 my-auto">
-                <div class="mx-auto align-self-center"><img class="mx-auto" height="auto" width="auto" src="../../../assets/img/yo.png"
+                <div class="mx-auto align-self-center"><img src="../../../assets/img/yo.png" style="  vertical-align: middle;
+                    max-width: 80vw;
+                    height: 80vw;
+                    border-radius: 50%;
+                    border: 1px black solid;"
                         alt="" srcset=""></div>
             </div>
             <div class="col-12 col-md-8 my-auto">
@@ -45,7 +49,7 @@
                 <div class="gameWrapper h-100" style="min-height: 20em;">
                     <div class="row text-center" style="height:80%">
                         <div class="col-6 my-auto"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="" srcset="" style="max-width: 100px;"></div>
-                        <div class="col-6 my-auto"> <img src="https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png" alt="" srcset="" style="max-width: 100px;"></div>
+                        <div class="col-6 my-auto"> <img src="https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png" alt="" srcset="" style="max-width: 90px;"></div>
                     </div>
                     <div class="col-10 p-auto mx-auto">
                         <a (click)="goPlay()" class="btn btn-outline-success w-100">Acceder al Playground</a>
