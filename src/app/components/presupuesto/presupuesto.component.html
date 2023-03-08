@@ -1,0 +1,36 @@
+<div class="p-3 align-items-center d-flex-inline wrapper text-center row-cols-1" style="height: 100%; width: auto;">
+    <div class="row">
+        <app-navbar class="col-12 mb-5"></app-navbar>
+    </div>
+    <div class="row py-5 my-5 bg-gry">
+        <div class="col-12">
+            <form>
+                <div class="alert alert-info" role="alert">
+                Si solo marcas el numero de paginas, estoy asumiento que es para maquetación web/Pagina con Javascript sin Framework.
+                  </div>
+                <div>
+                    <label for="numPages">Número de páginas:</label>
+                    <input class="ms-3" type="number" id="numPages" min="1" value="{{total.plata[4]}}" (click)="pagesLogic()">
+                </div>
+                <div>
+                    <input class="me-3 my-3" type="checkbox" id="hasEcommerce" value="500" (click)="checker('hasEcommerce')">
+                    <label for="hasEcommerce">Tienda en línea</label>
+                </div>
+                <div>
+                    <input  class="me-3 my-1" type="checkbox" id="hasBlog" value="200" (click)="checker('hasBlog')">
+                    <label for="hasBlog">Blog</label>
+                </div>
+                <div>
+                    <input  class="me-3 my-3" type="checkbox" id="hasCMS" value="250" (click)="checker('hasCMS')">
+                    <label for="hasCMS">Gestor de contenidos</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-12" *ngIf="formIsValid()">
+            <div class="alert alert-success" role="alert">
+                La cotización aproximada es de <h1>{{total.total}} &euro;</h1>
+            </div>
+        </div>
+    </div>
+    <app-footer class="mt-5 bottom-0 start-50 translate-middle-x"></app-footer>
+</div>

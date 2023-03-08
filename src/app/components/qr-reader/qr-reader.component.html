@@ -1,0 +1,16 @@
+<div *ngIf="isLoggedIn; else loggedOut">
+    <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+</div>
+  
+  <ng-template #loggedOut>
+    <div id="loadingMessage">⌛ Loading video...</div>
+</ng-template>
+<div *ngIf="CanvaReady;">
+    <canvas id="canvas"></canvas>
+</div>
+ <div *ngIf="OutputReady">
+    <div id="output">
+        <div id="outputMessage">No QR code detected.</div>
+        <div><b>Data:</b> <span id="outputData"></span></div>
+      </div>
+ </div>

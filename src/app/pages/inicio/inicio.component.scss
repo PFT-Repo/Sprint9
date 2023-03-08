@@ -1,0 +1,84 @@
+#cover{
+    width: 100%;
+}
+#carta{
+  border: none;
+  border-radius: 10px;
+    image-rendering: crisp-edges;
+    #card-img-overlay{
+    visibility: hidden;
+}
+&:hover{
+    img{
+      opacity: .2;
+    }
+    background-image: none;
+    background-color: rgba($color: #000000, $alpha: .8);
+    #card-img-overlay{
+        visibility: visible;
+    }
+}
+}
+
+.back{
+  background: url('../../../assets/img/fancy-pants.jpg'), #111111;
+  color: #eee;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+    animation: scroll 700s linear infinite;
+    background: url('../../../assets/img/fancy-pants.jpg'), #111111;
+    color: #eee;
+    height: 100vh;
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    
+  }
+  
+  @keyframes scroll {
+     100%{
+      background-position:0px -1500px;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .wrapper {
+      animation: scroll 400s linear infinite;
+    }
+  }
+  
+  @media (min-width: 670px) {
+    .title {
+      font-size: 5rem;
+    }
+  }
+
+
+  
+.gameWrapper {
+   // animation: scroll 70s linear infinite;
+    //background: url('../../../assets/img/matrix.gif'), #111111;
+    background: linear-gradient( gray,black,black,black,transparent);
+    color: #eee;
+  }
+  
+  @keyframes scroll {
+     100%{
+      background-position:0px -1500px;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .gameWrapper {
+      animation: scroll 400s linear infinite;
+    }
+  }
+  
+  @media (min-width: 670px) {
+    .title {
+      font-size: 5rem;
+    }
+  }

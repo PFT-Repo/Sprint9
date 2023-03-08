@@ -1,0 +1,41 @@
+  .guabtn{
+background-image: url('https://scontent.fbcn7-3.fna.fbcdn.net/v/t39.8562-6/302524815_3448899778679909_2843186333341006023_n.png?_nc_cat=104&ccb=1-7&_nc_sid=6825c5&_nc_ohc=0MxCHRbx5MIAX_S3riF&_nc_ht=scontent.fbcn7-3.fna&oh=00_AfAv13XSE7cN2q7mfcRutGIc2asO-5-mF9kMQ2guzckPaQ&oe=640CA20F');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+min-height: 40px;
+  }
+.glass{
+  padding: auto;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px); 
+}
+
+.wrapper {
+    animation: scroll 70s linear infinite;
+    background: url('../../../assets/img/fancy-pants.jpg'), #111111;
+    color: #eee;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+  }
+  
+  @keyframes scroll {
+     100%{
+      background-position:0px -1500px;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .wrapper {
+      animation: scroll 400s linear infinite;
+    }
+  }
+  
+  @media (min-width: 670px) {
+    .title {
+      font-size: 5rem;
+    }
+  }

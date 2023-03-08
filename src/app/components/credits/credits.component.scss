@@ -1,0 +1,37 @@
+html,body,app-root,app-credits{
+    overflow: hidden;
+}
+marquee {
+    margin: 0 145px;
+    text-align:center;
+  }
+  
+  h1, h2, h3, p {
+    color: black;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size:2em;
+  }
+  
+  h2 {
+      font-variant:small-caps;
+  }
+  
+  .scrollingtext {
+  font-family:"Franklin Gothic";
+  font-size:2em;
+  line-height:1em;
+  text-align: center;
+  color:black;
+    margin: auto;
+    animation: marquee 15s linear;
+  }
+  
+  @keyframes marquee {
+    0% { transform: perspective(10px) rotateX(2deg);
+   }
+    100% { transform: perspective(10px) rotateX(0deg);
+   }
+  }

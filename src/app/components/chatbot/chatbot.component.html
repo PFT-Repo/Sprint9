@@ -1,0 +1,16 @@
+
+<div class="container-fluid wrapper">
+    <app-navbar></app-navbar>
+    <div class="chat-window">
+    <div *ngFor="let message of messages" class="message">
+        <div [ngClass]="{'message-text': true, 'bot': message.bot}">{{ message.text }}</div>
+        <div class="message-timestamp">{{ message.timestamp | date: 'shortTime' }}</div>
+      </div>
+</div>
+<form (ngSubmit)="sendMessage()" #messageForm>
+  <input type="text" name="message" [(ngModel)]="newMessage" placeholder="Type your message...">
+  <button type="submit">Send</button>
+</form>
+<app-footer></app-footer>
+</div>
+

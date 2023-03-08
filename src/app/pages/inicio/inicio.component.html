@@ -1,0 +1,63 @@
+<div id="cover" class="back h-100" >
+    <div #aboutme class="container-fluid p-3 bg-d " style="height: auto; width: 100%;">
+        <app-navbar class="col-12"></app-navbar>
+            <div class="row h-100 text-center" style="min-height: 50em;">
+            <div class="col-12 col-md-4 my-auto">
+                <div class="mx-auto align-self-center"><img class="mx-auto" src="../../../assets/img/yo.png"
+                        alt="" srcset=""></div>
+            </div>
+            <div class="col-12 col-md-8 my-auto">
+                <div>
+                    <h1>Daniel Oreste Chavez Orribo</h1>
+                    <h2>-- Turpial Code --</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic exercitationem, rem
+                        quidem esse velit odit dolorem quos sapiente officiis cumque in, autem voluptates enim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 text-bg-dark">
+        <h2 class="text-center pb-4">Mis Tecnologías</h2>
+        <div class="row row-cols-1 row-cols-md-6 g-4">
+            <div class="" *ngFor="let i of items">
+                <div id="carta" class="card text-white col bg-dark text-center">
+                    <img src="{{i.img}}" class="card-img m-auto" alt="..." style="min-width: 20%; max-width: 45%; justify-content: center; align-items: center;">
+                    <div id="card-img-overlay" class="card-img-overlay text-white">
+                        <h5 class="card-title">{{i.name}}</h5>
+                        <p class="card-text">{{i.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-4 " style="min-height: 30em;">
+        <div class="row">
+            <div class="col-12 col-md-8 my-auto">
+                <h2>
+                   ¿ Te gustaria poder ver este simple portafolio en un ambiente distinto ?
+                </h2>
+                <p class="text-center text-muted">Disfruta de mi playground con three.js, donde podrás ver algunos de mis trabajos en un entorno tridimensional con la opción de poder visitar esos proyectos</p>
+            </div>
+
+            <div class="col-12 col-md-4 ">
+                <div class="gameWrapper h-100" style="min-height: 20em;">
+                    <div class="row text-center" style="height:80%">
+                        <div class="col-6 my-auto"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="" srcset="" style="max-width: 100px;"></div>
+                        <div class="col-6 my-auto"> <img src="https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png" alt="" srcset="" style="max-width: 100px;"></div>
+                    </div>
+                    <div class="col-10 p-auto mx-auto">
+                        <a (click)="goPlay()" class="btn btn-outline-success w-100">Acceder al Playground</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="p-5 bg-dark d-flex-column text-center align-items-center">
+        <h2 class="mb-5">Averigua el costo de materializar tu idea</h2>
+        <button class="btn btn-outline-info" (click)="goCalc()">Accede a la calculadora</button>
+    </div>
+    <app-footer></app-footer>
+</div>

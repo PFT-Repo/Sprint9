@@ -1,0 +1,20 @@
+<div class="container-fluid d-flex-inline justify-content-around wrapper p-auto "
+style="height: 100%;">
+    <app-navbar></app-navbar>
+    <h1 class="mx-auto w-100 text-center mb-5">Generación de imagenes</h1>
+    <p class="mx-auto w-100 text-center mb-5"> En este apartado podrás generar imagenes por medio de inteligencia artificial proporcionada por OpenAi</p>
+    <div class="row">
+        <input id="imputPrompt" type="text" class="text col-10 mx-auto" placeholder="A cat sitting on a couch">
+        <button class="btn btn-outline-success col-12 col-md-10 my-3 mx-auto" (click)="generateImage()">Generate Image</button>
+    </div>
+    <div *ngIf="loader; else loggedOut">
+        <div class="m-auto spinner"></div>
+      </div>
+      <ng-template #loggedOut>
+        <div *ngFor="let  img of images">
+            <app-image-cards [images]="img"></app-image-cards>
+        </div>
+      </ng-template>
+   
+    <app-footer class="mt-5 w-100 bottom-0 start-50 translate-middle-x"></app-footer>
+  </div>

@@ -1,0 +1,14 @@
+<div class="p-3 align-items-center d-flex-inline wrapper text-center row-cols-1" style="height: 100%; width: 100%;">
+    <div class="row5">
+        <app-navbar class="col-12 mb-5"></app-navbar>
+    </div>
+    <div class="container" style="min-height: 51.5vh;">
+        <h1 class="col-12 mb-3 mt-2" >Generador de Códigos Qr</h1>
+        <input class="col-12 my-3" type="text" id="genval" placeholder="Coloca acá el texto para generar el Qr">
+        <button class="col-12 btn btn-info" type="submit" (click)="generateQRCode()">Generar</button>
+        <div *ngIf="value != '' ">
+            <qrcode [qrdata]="value" [width]="256" [errorCorrectionLevel]="'H'" />
+        </div>
+    </div>
+    <app-footer class="mt-5 bottom-0 start-50 translate-middle-x"></app-footer>
+</div>
