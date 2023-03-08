@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QRCodeModule } from 'angularx-qrcode';
 import { HttpClientModule } from '@angular/common/http';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     QRCodeModule,HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
 export const environment = {
-    production: false,
-    OpenApi: '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'
+    production: true,
+    OpenApi: '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'
   };
