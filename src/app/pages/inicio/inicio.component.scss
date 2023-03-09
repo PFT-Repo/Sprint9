@@ -58,12 +58,18 @@
 
 
   
-.gameWrapper {
-   // animation: scroll 70s linear infinite;
-    //background: url('../../../assets/img/matrix.gif'), #111111;
-    background: linear-gradient( gray,black,black,black,transparent);
-    color: #eee;
-  }
+  .gameWrapper {
+    // animation: scroll 70s linear infinite;
+     //background: url('../../../assets/img/matrix.gif'), #111111;
+     background: linear-gradient( gray,black,black,black,transparent);
+     color: #eee;
+   }
+   .gameWrapper2 {
+    // animation: scroll 70s linear infinite;
+     //background: url('../../../assets/img/matrix.gif'), #111111;
+     background: linear-gradient(transparent,black,transparent);
+     color: #eee;
+   }
   
   @keyframes scroll {
      100%{

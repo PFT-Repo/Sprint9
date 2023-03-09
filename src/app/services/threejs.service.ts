@@ -140,7 +140,7 @@ export class ThreejsService {
     let geometry = new THREE.TorusGeometry(10, 3, 16, 100);
     let material = new THREE.MeshBasicMaterial({ color: 'gold' })
     this.torus = new THREE.Mesh(geometry, material);
-    this.torus.position.set(0, 300, 0);
+    this.torus.position.set(1, 50, 30);
     this.scene.add(this.torus)
     // piso
     this.floor = new THREE.Mesh(
@@ -225,7 +225,7 @@ export class ThreejsService {
     direction.set(0, 0, -1);
     origin.setFromMatrixPosition(this.camera.matrixWorld);
     raycaster.near = 1;
-    raycaster.far = 100;
+    raycaster.far = 5;
 
     raycaster.set(origin, direction);
 
